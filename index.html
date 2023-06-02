@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <center>
+        <h1>Budgeting App</h1>
+    </center>
+
+    <div class="budgetForm">
+
+        <center>
+            <h2>Set Budget</h2>
+        </center>
+
+        <center><label for="budget">Enter Budget: </label>
+            <input type="number" id="budget" class="budget" required>
+        </center>
+        <br>
+
+        <center><button onclick="setBudget()">Set</button></center>
+        <br>
+    </div>
+
+
+    <div class="expenseForm">
+
+        <center>
+            <h2>Add Expense</h2>
+        </center>
+
+        <center><label for="expenseDate">Enter Date: </label>
+            <input type="date" id="expenseDate" class="expenseDate" required>
+        </center>
+        <br>
+
+        <center><label for="expenseAmount">Enter Amount: </label>
+            <input type="number" id="expenseAmount" class="expenseAmount" onkeyup="checkBudget()" runat="server"
+                required>
+        </center>
+        <center><p id="errorMessage"></p></center>
+        <br>
+
+        <center><label for="expenseCategory">Enter Category: </label>
+            <select name="expenseCategory" id="expenseCategory">
+                <option value="Loan">Loan</option>
+                <option value="Rent">Rent</option>
+                <option value="Groceries">Groceries</option>
+                <option value="Food">Food</option>
+                <option value="Others">Others</option>
+            </select>
+        </center>
+        <br>
+
+        <center><label for="expenseDescription">Enter Description: </label>
+            <input type="text" id="expenseDescription" class="expenseDescription" required>
+        </center>
+        <br>
+
+
+        <center><button onclick="setExpense()">Add</button></center>
+        <br>
+    </div>
+
+    <div class="expenseList">
+        <center>
+            <h2>Expense List</h2>
+        </center>
+        <center>
+            <table id="expTable">
+                <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Operations</th>
+                </tr>
+            </table>
+        </center>
+    </div>
+
+
+    <div class="balanceList">
+        <center>
+            <h2>Budget Table</h2>
+        </center>
+
+        <center><button type="button" onclick="showTable()">Show Budget Table</button></center>
+        <br>
+
+        <div id="budgetList">
+
+            <center>
+                <table id="budgetTable">
+                    <tr>
+                        <th>Total Budegt</th>
+                        <th>Expenses</th>
+                        <th>Balance</th>
+                    </tr>
+                    <tr id="budgetRow">
+
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </div>
+</body>
+
+</html>

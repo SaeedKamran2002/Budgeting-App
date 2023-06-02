@@ -1,0 +1,45 @@
+#errorMessage {
+    display: none;
+}
+
+#budgetList {
+    display: none;
+}
+
+.budgetForm {
+    border: 1px solid black;
+    margin-left: 24vw;
+    padding: 5px;
+    width: 50%;
+}
+
+.expenseForm {
+    border: 1px solid black;
+    margin-left: 24vw;
+    margin-top: 2vh;
+    padding: 5px;
+    width: 50%;
+}
+
+.expenseList {
+    border: 1px solid black;
+    margin-left: 24vw;
+    margin-top: 2vh;
+    padding: 5px;
+    width: 50%;
+}
+
+.balanceList{
+    border: 1px solid black;
+    margin-left: 24vw;
+    margin-top: 2vh;
+    padding: 5px;
+    width: 50%;
+}
+
+table,
+tr,
+td {
+    border: 1px solid black;
+    padding: auto;
+}
