@@ -32,6 +32,7 @@ function deleteExpense(a) {
     expenseArray.splice(a, 1);
 
     document.getElementById("expTable").deleteRow(a + 1);
+    showTable();
 }
 
 function checkBudget() {
